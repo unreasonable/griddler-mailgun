@@ -25,9 +25,11 @@ module Griddler
           attachments: attachment_files,
           headers: serialized_headers,
           vendor_specific: {
+            sender: params["sender"],
             stripped_text: params["stripped-text"],
             stripped_signature: params["stripped-signature"],
-            stripped_html: params["stripped-html"]
+            stripped_html: params["stripped-html"],
+            content_id_map: params["content-id-map"]
           }
         }
       end
